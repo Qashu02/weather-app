@@ -35,16 +35,7 @@ cityname=" ";
          temp.style.fontWeight="bold";
          temp.style.color='white'
        
-        //  let deg=document.querySelector('.deg');
-        
-   
-        //  deg.style.paddingLeft='1rem'
-        //  deg.style.textAlign='center'
-        //  deg.style.fontSize="3rem";
-        //  deg.style.fontWeight="bold";
-        //  deg.style.color='white'
-        
-        //  temp.insertAdjacentElement('afterend', deg);
+    
 
          humidity.innerText=res.data.main.humidity+' Humidity';
          wind.innerText=res.data.wind.speed+'km/h'+' Wind';
