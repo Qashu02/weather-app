@@ -1,9 +1,11 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A weather application",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "build": "echo 'webpack'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/Qashu02/weather-app/issues"
   },
-  "homepage": "https://github.com/Qashu02/weather-app#readme"
+  "homepage": "https://github.com/Qashu02/weather-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2"
+  }
 }
