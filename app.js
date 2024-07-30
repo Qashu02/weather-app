@@ -15,7 +15,7 @@ cityname=" ";
      
       let res =await axios.get(apiUrl+cityname+`&appid=${apiKey}`);
       
-      card.style.visibility= "visible";
+      
 
         let city= document.querySelector(".city");
         city.innerHTML=res.data.name;
@@ -45,20 +45,22 @@ cityname=" ";
       console.log(res)
       let weatherimg=document.querySelector(".weather-image");
     if(res.data.weather[0].main=='Smoke'){
-weatherimg.src='/home/h-m-qasim/Downloads/Weather-App-JS-main/images/mist.png'
-    }else if(res.data.weather[0]=='Clouds'){
-      weatherimg.src='/home/h-m-qasim/Downloads/Weather-App-JS-main/images/clouds.png';
+weatherimg.src='./images/mist.png'
+    }else if(res.data.weather[0].main=='Clouds'){
+      weatherimg.src='./images/clouds.png';
     }
-    else if(res.data.weather[0]=='Rain'){
-      weatherimg.src='/home/h-m-qasim/Downloads/Weather-App-JS-main/images/rain.png';
+    else if(res.data.weather[0].main=='Rain'){
+      weatherimg.src='./images/rain.png';
     }
-    else if(res.data.weather[0]=='Drizzle'){
-      weatherimg.src='/home/h-m-qasim/Downloads/Weather-App-JS-main/images/drizzle.png';
+    else if(res.data.weather[0].main=='Drizzle'){
+      weatherimg.src='./images/drizzle.png';
     
     }
-    else if(res.data.weather[0]=='Snow'){
-      weatherimg.src='/home/h-m-qasim/Downloads/Weather-App-JS-main/images/snow.png';
+    else if(res.data.weather[0].main=='Snow'){
+      weatherimg.src='./images/snow.png';
     
+    }else{
+      weatherimg.src='./images/clear.png'
     }
    } catch(e){
     console.log(e);
@@ -71,7 +73,7 @@ weatherimg.src='/home/h-m-qasim/Downloads/Weather-App-JS-main/images/mist.png'
 
 async function ShowCard(){
   
-
+  card.style.visibility= "visible";
 
 }
 let btn=document.querySelector("button");
